@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+
+  - name: install pip dependencies
+    pip:
+      name:
+        - pywinrm
+      state: present
+
+  - name: install galaxy collections
+    command:
+      ansible-galaxy collection install community.windows  --ignore-certs
+      
