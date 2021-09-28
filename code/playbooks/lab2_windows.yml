@@ -1,0 +1,24 @@
+---
+## $ansible-playbook --syntax-check playbok.yml
+
+- name: Enable internet services
+  hosts: Windows
+
+  tasks:
+    - name: enable iis role
+      ansible.windows.win_powershell:
+        script: |
+          Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole -NoRestart
+
+    - name: index page creation
+      ansible.windows.win_copy:
+        dest: C:\inetpub\wwwroot\index.html
+        content: |
+          IO
+          Patate2
+
+    - name: connect to test internet web server
+      uri:
+        url: "http://{{ inventory_hostname }}"
+        status_code: 200
+      delegate_to: localhost
