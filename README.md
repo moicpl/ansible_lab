@@ -2,8 +2,8 @@
 petit cours de pratique pour les bases ansible
 
 
-1. ansible.cfg and ad_hoc commands
-2. inventory
+1. ansible.cfg and inventory
+2. ad-hoc commands
 3. playbook to copy files
 4. install apps and configure
 5. loops and fancy stuff
