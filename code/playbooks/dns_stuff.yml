@@ -1,19 +1,16 @@
 ---
 # Playbook to address dns local issue with corporate laptops
 
-- hosts: localhost
-  connection: local
-  become: true
-  vars:
-    etat: present
+- hosts: all
+  gather_facts: false
   tasks:
 
   - name: add lines in /etc/hosts to reach vm's
     lineinfile:
       path: /etc/hosts
-      line: "{{ item.ip }}       {{ item.dns }}"
-      state: "{{ etat }}"
-    loop:
-      - { ip: "172.16.16.100", dns: "labo-lin-test.pldomain" }
-      - { ip: "172.16.16.101", dns: "labo-win-test.pldomain" }
-      
+      line: "{{ hostvars[inventory_hostname].ansible_host }}       {{ inventory_hostname }}"
+      state: "{{ state | d('present') }}"
+    delegate_to: localhost
+    connection: local
+    become: true
+    
