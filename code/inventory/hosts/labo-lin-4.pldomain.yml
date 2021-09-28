@@ -1,0 +1,5 @@
+[CentOS] 
+labo-lin-4.pldomain  ansible_host=172.16.16.132
+
+[labo]
+labo-lin-4.pldomain  ansible_host=172.16.16.132
