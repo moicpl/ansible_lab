@@ -1,0 +1,25 @@
+
+
+$ yum list installed ansible
+
+$ yum install ansible
+
+$ ansible --version
+
+$ vim ansible.cfg
+    [defaults]
+    remote_user = labo
+    inventory = inventory
+
+    [privilege_escalation]
+    become = False
+    become_method = sudo
+    become_user = root
+    become_ask_pass = False
+
+
+$ ansible all -m command -a 'id'
+
+$ ansible all -b -m copy -a 'content="This server is managed by Ansible.\n" dest=/etc/motd'
+
+$ ansible all -m command -a 'cat /etc/motd'
