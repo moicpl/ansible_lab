@@ -2,7 +2,7 @@
 ## $ansible-playbook --syntax-check playbok.yml
 
 - name: Enable internet services
-  hosts: RedHat
+  hosts: CentOS
   become: yes
 
   tasks:
