@@ -2,6 +2,7 @@
 # Playbook to address dns local issue with corporate laptops
 
 - hosts: all
+  serial: 1
   gather_facts: false
   tasks:
 
