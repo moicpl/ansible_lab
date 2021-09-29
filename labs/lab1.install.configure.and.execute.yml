@@ -34,6 +34,6 @@ $ ansible CentOS -b -m copy -a 'content="This server is managed by Ansible.\n" d
 
 $ ansible CentOS -a 'cat /etc/motd'
 
-$ ansible Windows -m win_shell -a "C:/users"
+$ ansible Windows -m win_shell -a "ls C:/users"
 
 $ ansible Windows -m win_shell -a "Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole -NoRestart"
