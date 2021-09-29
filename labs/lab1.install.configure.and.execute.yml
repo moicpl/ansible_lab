@@ -1,4 +1,5 @@
 
+###  CONFIG
 
 $ yum list installed ansible
 
@@ -18,10 +19,21 @@ $ vim ansible.cfg
     become_ask_pass = False
 
 
+### INVENTAIRE 
+
+$ ansible-inventory --list
+
+$ ansible-inventory  --host labo-win-1.pldomain
+
+
+### Ad-HOC COMMANDS
+
 $ ansible all -m command -a 'id'
 
-$ ansible all -b -m copy -a 'content="This server is managed by Ansible.\n" dest=/etc/motd'
+$ ansible CentOS -b -m copy -a 'content="This server is managed by Ansible.\n" dest=/etc/motd'
 
-$ ansible all -m command -a 'cat /etc/motd'
+$ ansible CentOS -a 'cat /etc/motd'
 
-$ ansible Windows -m win_shell -a " Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole -NoRestart"
+$ ansible Windows -m win_shell -a "C:/users"
+
+$ ansible Windows -m win_shell -a "Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole -NoRestart"
