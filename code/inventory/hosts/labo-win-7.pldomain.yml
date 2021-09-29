@@ -1,0 +1,5 @@
+[Windows] 
+labo-win-7.pldomain  ansible_host=172.16.16.115
+
+[labo]
+labo-win-7.pldomain  ansible_host=172.16.16.115

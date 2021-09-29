@@ -1,5 +1,5 @@
 [CentOS] 
-labo-lin-3.pldomain  ansible_host=172.16.16.131
+labo-lin-3.pldomain  ansible_host=172.16.16.150
 
 [labo]
-labo-lin-3.pldomain  ansible_host=172.16.16.131
+labo-lin-3.pldomain  ansible_host=172.16.16.150
