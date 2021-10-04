@@ -32,7 +32,7 @@
         enabled: true
         state: started
 
-    - name: test index page is installed
+    - name: install index page
       copy:
         dest: /var/www/html/index.html
         mode: 0644
