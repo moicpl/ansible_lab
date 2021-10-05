@@ -1,0 +1,15 @@
+---
+  - hosts: labo
+    gather_facts: true
+    tasks:
+    - debug:
+        var: ansible_distribution
+
+  - name: include linux stuff
+    import_playbook: lab2_linux.yml
+    become: true
+    when: ansible_distribution == 'CentOS'
+
+  - name: include windows stuff
+    import_playbook: lab2_windows.yml
+    when: ansible_distribution == 'Microsoft Windows 10 Entreprise'
