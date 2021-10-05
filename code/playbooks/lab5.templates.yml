@@ -5,3 +5,4 @@
     template:
       src: ../ma_template.j2
       dest: /tmp/patate.conf
+      backup: yes
