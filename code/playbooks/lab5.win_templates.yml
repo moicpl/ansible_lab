@@ -1,0 +1,7 @@
+---
+- hosts: Windows
+  tasks:
+  - name: déposer template de config dans C:\users\labo\Desktop\{{ moi }}.txt
+    ansible.windows.win_template:
+      src: ../ma_template.j2
+      dest: C:\users\labo\Desktop\{{ moi }}.txt
