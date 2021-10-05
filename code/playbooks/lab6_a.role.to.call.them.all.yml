@@ -1,0 +1,5 @@
+---
+- hosts: labo
+  tasks:
+  
+  - include_tasks:
