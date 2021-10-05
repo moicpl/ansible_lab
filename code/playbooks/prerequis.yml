@@ -19,4 +19,4 @@
   - name: install galaxy collections
     command:
       ansible-galaxy collection install community.windows  --ignore-certs
-      
+    become: false
