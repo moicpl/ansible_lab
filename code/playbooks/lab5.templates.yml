@@ -1,0 +1,7 @@
+---
+- hosts: CentOS
+  tasks:
+  - name: déposer template de config dans /tmp/patate.conf
+    template:
+      src: ../ma_template.j2
+      dest: /tmp/patate.conf
