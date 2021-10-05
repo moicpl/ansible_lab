@@ -30,11 +30,15 @@ $ ansible-inventory  --host labo-win-1.pldomain
 
 $ ansible all -m command -a 'id'
 
+$ ansible all -b -m command -a 'id'
+
 $ ansible CentOS -b -m copy -a 'content="This server is managed by Ansible.\n" dest=/etc/motd'
 
 $ ansible CentOS -a 'cat /etc/motd'
 
-$ ansible Windows -m winwhoami
+$ ansible Windows -m win_whoami
 
 $ ansible Windows -m win_shell -a "ls C:/users"
+
+$ ansible Windows -m win_copy -a 'content="This server is managed by Ansible.\n" dest=C:\Users\labo\Bureau'
 
