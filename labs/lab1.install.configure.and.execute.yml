@@ -40,5 +40,5 @@ $ ansible Windows -m win_whoami
 
 $ ansible Windows -m win_shell -a "ls C:/users"
 
-$ ansible Windows -m win_copy -a 'content="This server is managed by Ansible.\n" dest=C:\Users\labo\Bureau'
+$ ansible Windows -m win_copy -a 'content="This server is managed by Ansible.\n" dest=C:\Users\labo\Bureau\ansible.txt'
 
