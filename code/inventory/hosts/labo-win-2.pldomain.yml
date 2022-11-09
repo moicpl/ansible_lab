@@ -1,5 +1,0 @@
-[Windows] 
-labo-win-2.pldomain  ansible_host=172.16.16.120
-
-[labo]
-labo-win-2.pldomain  ansible_host=172.16.16.120
